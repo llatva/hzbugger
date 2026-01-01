@@ -6084,6 +6084,18 @@
 		)
 		(uuid "fd0af151-f121-4aa3-b636-503836590300")
 	)
+	(text "RESET-NAPPI!"
+		(exclude_from_sim no)
+		(at 135.89 149.606 0)
+		(effects
+			(font
+				(size 5 5)
+				(thickness 1)
+				(bold yes)
+			)
+		)
+		(uuid "b38fe05c-3cb8-42f3-b1f1-cb28918dd79d")
+	)
 	(global_label "DIO"
 		(shape input)
 		(at 191.77 110.49 180)
@@ -7552,7 +7564,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_5.3mm_M5_ISO7380"
+		(property "Footprint" "MountingHole:MountingHole_5.3mm_M5_Pad"
 			(at 161.29 161.29 0)
 			(effects
 				(font

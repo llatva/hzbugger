@@ -1,0 +1,85 @@
+# KiCad temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*.kicad_prl
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*.cache
+*-save.pro
+*-save.kicad_pcb
+*-cache.lib
+fp-info-cache
+*.net
+*.dsn
+*.ses
+
+# KiCad build outputs
+*.zip
+*gerbers*/
+*gerber*/
+*bom*/
+
+# Firmware build artifacts
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.su
+*.a
+*.lib
+*.obj
+
+# Build directories
+build/
+Build/
+BUILD/
+obj/
+Obj/
+OBJ/
+Debug/
+Release/
+
+# IDE specific files
+*.swp
+*.swo
+.DS_Store
+.vscode/
+.idea/
+*.code-workspace
+
+# Compiler and toolchain specific
+*.uvproj
+*.uvopt
+*.uvgui.*
+*.dep
+*.o.d
+*.crf
+*.lnp
+*.axf
+*.htm
+*.iex
+*.plg
+*.tra
+*.fed
+*.l1p
+*.l2p
+
+# Python artifacts (if used for scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Other common artifacts
+*.log
+*.temp

@@ -606,6 +606,7 @@
 		(property "Reference" "R6"
 			(at 0 -1.43 180)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "fcbcb344-10e4-4f6e-ab3e-df53549f92e1")
 			(effects
 				(font
@@ -812,7 +813,6 @@
 			(uuid "3c6d4768-5c55-4820-af24-cef077042508")
 		)
 		(model "${KICAD8_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
-			(hide yes)
 			(offset
 				(xyz 0 0 0)
 			)

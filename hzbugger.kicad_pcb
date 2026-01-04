@@ -33440,7 +33440,7 @@
 		)
 	)
 	(gr_text "PB8"
-		(at 134.164101 96.642913 90)
+		(at 137.334656 97.184442 90)
 		(layer "F.SilkS")
 		(uuid "e529f61c-610f-48a0-89dd-1dc2400990b1")
 		(effects
@@ -33492,7 +33492,7 @@
 		)
 	)
 	(gr_text "PB9"
-		(at 140.9446 96.9264 90)
+		(at 140.462 96.9264 90)
 		(layer "F.SilkS")
 		(uuid "f859c495-eb09-4b52-b2ca-a16b4b5f0de3")
 		(effects

@@ -11037,7 +11037,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
+		(property "Footprint" "hzbugger:SMD-pcbend-IDC-Header_2x05_P2.54mm"
 			(at 196.85 134.62 0)
 			(effects
 				(font

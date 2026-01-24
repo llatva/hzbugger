@@ -3115,108 +3115,6 @@
 				)
 			)
 		)
-		(symbol "Mechanical:MountingHole_Pad"
-			(pin_numbers hide)
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim yes)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "H"
-				(at 0 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "MountingHole_Pad"
-				(at 0 4.445 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Mounting Hole with connection"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "mounting hole"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "MountingHole*Pad*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "MountingHole_Pad_0_1"
-				(circle
-					(center 0 1.27)
-					(radius 1.27)
-					(stroke
-						(width 1.27)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "MountingHole_Pad_1_1"
-				(pin input line
-					(at 0 -2.54 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Power_Protection:SRV05-4"
 			(pin_names
 				(offset 0)
@@ -4927,12 +4825,6 @@
 		(uuid "a519b418-2bbf-42cd-93cb-828d935befa2")
 	)
 	(junction
-		(at 121.92 33.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a672d525-f438-43e4-acb9-e7e6f4f6aa5b")
-	)
-	(junction
 		(at 55.88 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5352,16 +5244,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 33.02) (xy 121.92 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43e17464-f640-4e10-b0ac-a5412153ad81")
-	)
-	(wire
-		(pts
 			(xy 55.88 85.09) (xy 55.88 92.71)
 		)
 		(stroke
@@ -5582,7 +5464,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 33.02) (xy 118.11 33.02)
+			(xy 118.11 33.02) (xy 129.54 33.02)
 		)
 		(stroke
 			(width 0)
@@ -5729,6 +5611,16 @@
 			(type default)
 		)
 		(uuid "9d1a2c84-e028-44b9-9e6d-184f69800805")
+	)
+	(wire
+		(pts
+			(xy 194.31 66.04) (xy 160.02 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d208f99-19dd-412c-aaff-2bccb282c1b7")
 	)
 	(wire
 		(pts
@@ -6012,6 +5904,16 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 76.2) (xy 160.02 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e773dee7-fa3e-4e65-9763-58e2fb7c7ff0")
+	)
+	(wire
+		(pts
 			(xy 167.64 35.56) (xy 177.8 35.56)
 		)
 		(stroke
@@ -6145,18 +6047,6 @@
 			)
 		)
 		(uuid "7340ec3d-0534-4dae-b6d1-1b4f4cfaf932")
-	)
-	(text "PINOUT TO SILK!"
-		(exclude_from_sim no)
-		(at 217.678 112.522 0)
-		(effects
-			(font
-				(size 6 6)
-				(thickness 1.2)
-				(bold yes)
-			)
-		)
-		(uuid "7eadee23-6d48-41cf-b851-f4cf0d09ad42")
 	)
 	(global_label "DIO"
 		(shape input)
@@ -6754,22 +6644,22 @@
 	)
 	(global_label "USB_DM"
 		(shape input)
-		(at 80.01 124.46 0)
+		(at 54.61 124.46 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "ca968029-c17f-4563-98e3-9e6555a365f7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.4942 124.46 0)
+			(at 44.1258 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -6972,6 +6862,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 189.23 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0ab5ce7c-fc53-40a0-b63a-de002a96857a")
+		(property "Reference" "#PWR21"
+			(at 189.23 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 193.548 77.978 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 189.23 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 189.23 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 189.23 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a5942780-9997-4b65-bd82-c2d351d7d18b")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "#PWR21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Fuse_Small")
 		(at 104.14 33.02 180)
 		(unit 1)
@@ -7074,7 +7029,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 240.03 64.77 0)
 			(effects
 				(font
@@ -7346,6 +7301,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 196.85 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "135e4548-0d10-46ff-8148-12f132ca6e62")
+		(property "Reference" "TP2"
+			(at 199.39 48.7679 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TPG1"
+			(at 199.39 51.3079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 201.93 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 196.85 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d0ced90c-32f1-490a-99f2-035e6ffe2ec5")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x06_Pin")
 		(at 109.22 172.72 180)
 		(unit 1)
@@ -7373,7 +7395,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+		(property "Footprint" "hzbugger:SMD-PinHeader_1x06_P2.54mm_Vertical"
 			(at 109.22 172.72 0)
 			(effects
 				(font
@@ -8323,71 +8345,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 127 175.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "321956da-1b87-4c91-9087-6d6c694e3275")
-		(property "Reference" "#PWR21"
-			(at 127 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 131.318 177.038 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 127 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "de6ed5e4-c344-46a9-aac0-56e0a0cc954b")
-		)
-		(instances
-			(project "hzbugger"
-				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
-					(reference "#PWR21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 91.44 170.18 90)
 		(unit 1)
@@ -8606,13 +8563,80 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 194.31 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "401f5d78-c2a3-4ed3-88d1-b281279643d5")
+		(property "Reference" "TP1"
+			(at 196.85 61.4679 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TPA14"
+			(at 196.85 64.0079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 199.39 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 199.39 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 194.31 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "087208b5-28a3-40c2-953c-d174649b0ee5")
+		)
+		(instances
+			(project ""
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Polarized_Small")
 		(at 247.65 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "41b776b4-625e-4262-b881-63af91544c1f")
 		(property "Reference" "C8"
@@ -8624,7 +8648,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
+		(property "Value" "100u"
 			(at 250.19 33.7438 0)
 			(effects
 				(font
@@ -8633,7 +8657,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-6032-15_Kemet-U_Pad2.25x2.35mm_HandSolder"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder"
 			(at 247.65 33.02 0)
 			(effects
 				(font
@@ -8660,7 +8684,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNP"
+		(property "LCSC" "C16133"
 			(at 247.65 33.02 0)
 			(effects
 				(font
@@ -8841,7 +8865,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 240.03 77.47 0)
 			(effects
 				(font
@@ -9715,6 +9739,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 185.42 76.2 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7298ab57-d501-4eb3-81f9-7fcfcc1a1509")
+		(property "Reference" "D5"
+			(at 185.928 81.788 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED1"
+			(at 185.674 79.248 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 185.42 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 185.42 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 185.42 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7fe3dc3d-0500-416d-8a82-868ea3439235")
+		)
+		(pin "2"
+			(uuid "19a98edb-3b17-42b9-9827-2e30ab59d354")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 109.22 49.53 180)
 		(unit 1)
@@ -9853,6 +9944,83 @@
 			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "#PWR27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 179.07 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7ad0982e-f23a-4cce-bcbf-94be31455181")
+		(property "Reference" "R18"
+			(at 179.07 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k5"
+			(at 179.07 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 179.07 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 179.07 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 179.07 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 179.07 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "340adcca-cb0a-4136-ada0-6c7fa32a24cc")
+		)
+		(pin "1"
+			(uuid "4571da99-ca66-43c8-a883-749c8ea48e7a")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -10352,74 +10520,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 137.16 172.72 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9a03dfd3-e073-42d9-93d4-afdc46661dda")
-		(property "Reference" "H2"
-			(at 139.7 170.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "H1"
-			(at 139.7 172.7199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
-			(at 137.16 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 137.16 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 137.16 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "45893faf-d5c1-4c50-893a-ee3f5d3cabda")
-		)
-		(instances
-			(project "hzbugger"
-				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
-					(reference "H2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 95.25 172.72 90)
 		(unit 1)
@@ -10555,71 +10655,6 @@
 			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "#PWR36")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 137.16 175.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a1979163-69a0-41bc-9ba5-52e704ff1b3f")
-		(property "Reference" "#PWR22"
-			(at 137.16 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 141.478 177.038 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 137.16 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0b4a5a48-2144-47a2-b84f-d31b1caa9802")
-		)
-		(instances
-			(project "hzbugger"
-				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
-					(reference "#PWR22")
 					(unit 1)
 				)
 			)
@@ -10863,7 +10898,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "hzbugger:SMD-PinHeader_1x04_P2.54mm_Vertical"
 			(at 48.26 182.88 0)
 			(effects
 				(font
@@ -11347,73 +11382,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 87.63 106.68 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b3a2488a-380d-4509-a741-f967af245e98")
-		(property "Reference" "TP5"
-			(at 85.852 100.838 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "IOPAD2"
-			(at 85.852 98.806 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 92.71 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 92.71 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 87.63 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c4387de4-6a09-4959-88b9-b1da9b0d95bb")
-		)
-		(instances
-			(project "hzbugger"
-				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
-					(reference "TP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 175.26 63.5 90)
 		(unit 1)
@@ -11630,72 +11598,6 @@
 			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "#PWR9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 121.92 33.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "be6e5685-b54b-4c01-b124-c1d8a518cb4a")
-		(property "Reference" "TP1"
-			(at 120.142 27.178 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "5Vtp"
-			(at 120.142 25.146 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
-			(at 127 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 127 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 121.92 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "67026e32-31b8-4e81-b18b-12ebcc586ae1")
-		)
-		(instances
-			(project ""
-				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
-					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -11977,6 +11879,71 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 196.85 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c4576fd6-3fb7-496f-bba4-bc6b43dd2283")
+		(property "Reference" "#PWR22"
+			(at 196.85 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 201.168 55.118 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 196.85 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9a461828-3838-41f8-8721-c6c041214816")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "#PWR22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 90.17 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12133,7 +12100,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 203.2 82.55 0)
 			(effects
 				(font
@@ -12464,74 +12431,6 @@
 			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "R17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 127 172.72 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d5f56cd3-db4b-464a-a70b-5bc4daf3be76")
-		(property "Reference" "H1"
-			(at 129.54 170.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "H1"
-			(at 129.54 172.7199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
-			(at 127 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 127 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 127 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5e1dce63-d72d-45b8-ada4-c4b575ece4ef")
-		)
-		(instances
-			(project ""
-				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
-					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -13070,73 +12969,6 @@
 			(project ""
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 90.17 104.14 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e70039d6-d3d5-4413-b786-b0e3e6afd36d")
-		(property "Reference" "TP4"
-			(at 88.392 98.298 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "IOPAD1"
-			(at 88.392 96.266 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 95.25 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 95.25 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 90.17 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "434bb032-3584-499b-b9a7-2fc0bd59d40b")
-		)
-		(instances
-			(project "hzbugger"
-				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
-					(reference "TP4")
 					(unit 1)
 				)
 			)

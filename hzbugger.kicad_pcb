@@ -12869,7 +12869,7 @@
 		(locked yes)
 		(layer "B.Cu")
 		(uuid "cf0bc69b-f403-4d37-a17d-c41acd3c933a")
-		(at 124.46 83.3251 180)
+		(at 124.631 83.058 180)
 		(property "Reference" "G***"
 			(at 0 0 0)
 			(layer "B.SilkS")

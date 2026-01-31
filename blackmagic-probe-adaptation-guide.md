@@ -53,6 +53,38 @@ make PROBE_HOST=hzbugger
 
 Flash the resulting binary to the Hzbugger using your preferred method (DFU, SWD, or a board-specific bootloader).
 
+## 4) STM32F103 DFU Bootloader (Firmware Upgrade Path)
+
+Hzbugger uses an **STM32F103** MCU, which includes a built-in USB DFU bootloader in system memory. You can leverage this for easy firmware upgrades without external tools.
+
+### Entering DFU Mode (STM32F103)
+
+The STM32F103 enters its ROM DFU bootloader when **BOOT0 = 1** and **BOOT1 = 0** at reset:
+
+- **BOOT0 high:** pull-up to 3.3 V (via jumper or switch).
+- **BOOT1 low:** BOOT1 is tied to PB2; keep it pulled down (default).
+
+Recommended hardware provisions for development boards:
+
+- A **BOOT0 jumper/switch** so DFU mode can be entered without rewiring.
+- A **RESET button** to re-assert reset after changing BOOT0.
+- Keep **BOOT1 (PB2) hard-tied low** unless you specifically need alternate boot modes.
+
+After setting BOOT0 high, reset the MCU and it should enumerate as a USB DFU device.
+
+### Flashing via DFU
+
+On Linux (with `dfu-util` installed):
+
+```bash
+dfu-util -l
+dfu-util -a 0 -s 0x08000000:leave -D blackmagic.bin
+```
+
+On Windows/macOS, use the **STM32CubeProgrammer** GUI to connect to the DFU device and program the binary at address `0x08000000`.
+
+Once flashing is complete, return **BOOT0 low** and reset to run the new firmware.
+
 ## 4) Verify USB Enumeration
 
 When the firmware is running, the Hzbugger should enumerate as **two serial devices**:
@@ -135,6 +167,7 @@ Hzbugger can supply **either 3.3 V or 5 V** to the target device.
 - **No USB ports appear:** verify firmware is flashed and USB cable is data-capable.
 - **GDB fails to connect:** check SWD wiring and common ground, then run `monitor swdp_scan`.
 - **UART has no output:** verify target baud rate and RX/TX pin orientation.
+- **DFU mode not detected:** confirm BOOT0 is high, BOOT1 is low, and reset was applied.
 - **Unstable target behavior:** confirm correct 3.3 V / 5 V selection and avoid double power sources.
 
 ## Summary

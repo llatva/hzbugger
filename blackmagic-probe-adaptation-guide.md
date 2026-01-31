@@ -85,7 +85,7 @@ On Windows/macOS, use the **STM32CubeProgrammer** GUI to connect to the DFU devi
 
 Once flashing is complete, return **BOOT0 low** and reset to run the new firmware.
 
-## 4) Verify USB Enumeration
+## 5) Verify USB Enumeration
 
 When the firmware is running, the Hzbugger should enumerate as **two serial devices**:
 
@@ -99,7 +99,7 @@ On Linux, you might see:
 
 > The exact numbering may vary depending on the system. Identify by unplugging/replugging or checking `dmesg` output.
 
-## 5) Using GDB Over SWD (Primary Serial Port)
+## 6) Using GDB Over SWD (Primary Serial Port)
 
 Connect GDB to the probe using the primary port. Example workflow:
 
@@ -126,7 +126,7 @@ continue
 
 This gives a full-featured debugging experience (breakpoints, memory inspection, etc.).
 
-## 6) Using UART Passthrough (Secondary Serial Port)
+## 7) Using UART Passthrough (Secondary Serial Port)
 
 The second CDC port is a transparent serial bridge to the target MCU UART pins. Use it as a normal serial terminal:
 
@@ -142,7 +142,7 @@ picocom -b 115200 /dev/ttyACM1
 
 This port can be used for logging, CLI shells, or any debug printf output from the target.
 
-## 7) Simultaneous SWD + UART Usage
+## 8) Simultaneous SWD + UART Usage
 
 Hzbugger supports **simultaneous SWD debugging and UART logging**. Typical flow:
 
@@ -152,7 +152,7 @@ Hzbugger supports **simultaneous SWD debugging and UART logging**. Typical flow:
 
 This is especially useful for correlating firmware logs with breakpoints or crash reproduction.
 
-## 8) Target Power Output (3.3 V / 5 V)
+## 9) Target Power Output (3.3 V / 5 V)
 
 Hzbugger can supply **either 3.3 V or 5 V** to the target device.
 
@@ -162,7 +162,7 @@ Hzbugger can supply **either 3.3 V or 5 V** to the target device.
 
 > Always verify the silk-screen or schematic for the correct selector position before powering the target.
 
-## 9) Quick Troubleshooting Checklist
+## 10) Quick Troubleshooting Checklist
 
 - **No USB ports appear:** verify firmware is flashed and USB cable is data-capable.
 - **GDB fails to connect:** check SWD wiring and common ground, then run `monitor swdp_scan`.

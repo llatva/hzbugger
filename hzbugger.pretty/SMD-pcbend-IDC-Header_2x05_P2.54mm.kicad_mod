@@ -1,7 +1,7 @@
 (footprint "SMD-pcbend-IDC-Header_2x05_P2.54mm"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "Through hole IDC box header, 2x05, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0")
 	(tags "Through hole vertical IDC box header THT 2x05 2.54mm double row")
@@ -25,19 +25,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "efa4fd06-3f41-4cfd-a800-92e197d3d572")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -69,36 +56,6 @@
 		)
 	)
 	(attr through_hole)
-	(fp_line
-		(start -3.54 -0.5)
-		(end -3.54 0.5)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "c5906ecf-3928-470d-8af4-0c0ee4f3312f")
-	)
-	(fp_line
-		(start -3.54 0.5)
-		(end -2.54 0)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "5a662ca6-d1dc-4233-8751-39b6750117bc")
-	)
-	(fp_line
-		(start -2.54 0)
-		(end -3.54 -0.5)
-		(stroke
-			(width 0.12)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "28195dae-9186-4282-87f7-12595bf879b8")
-	)
 	(fp_line
 		(start -3.68 -1.27)
 		(end -3.68 11.43)
@@ -162,12 +119,6 @@
 		(layers "B.Cu" "B.Mask")
 		(uuid "aac54bb2-f910-4d2a-af9b-25920c72a05f")
 	)
-	(pad "2" smd rect
-		(at 1.27 2.54 90)
-		(size 1.7 6)
-		(layers "B.Cu" "B.Mask")
-		(uuid "afe03bf6-b3e5-41a6-8747-45a5041836a4")
-	)
 	(pad "3" smd rect
 		(at 1.27 2.54 270)
 		(size 1.7 6)
@@ -216,6 +167,7 @@
 		(layers "B.Cu" "B.Mask")
 		(uuid "4a3e0bb0-b7d0-46b8-8d8f-d32021b4b107")
 	)
+	(embedded_fonts no)
 	(model "${KICAD8_3DMODEL_DIR}/Connector_IDC.3dshapes/IDC-Header_2x05_P2.54mm_Vertical.wrl"
 		(hide yes)
 		(offset

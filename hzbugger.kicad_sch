@@ -7461,7 +7461,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "hzbugger:SMD-PinHeader_1x06_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
 			(at 109.22 172.72 0)
 			(effects
 				(font
@@ -9798,6 +9798,90 @@
 			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "hzbugger:TS-1187A-B-A-B")
+		(at 66.04 58.42 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6a4439c1-2b0e-48e4-80cf-6a4471679adc")
+		(property "Reference" "SW2"
+			(at 47.752 57.658 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BOOT0_SW"
+			(at 43.434 59.944 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "hzbugger:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5"
+			(at 53.34 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Tactile-Switches_XKB-Enterprise-TS-1187-B-A-A_C318884.html"
+			(at 50.8 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 66.04 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C318884"
+			(at 48.26 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b8b04c23-1ba4-48e1-aaa1-90e528144518")
+		)
+		(pin "2"
+			(uuid "6618ebf6-d2c4-470f-b968-88ad42036887")
+		)
+		(pin "3"
+			(uuid "a940127d-e516-4c37-82ca-9a2bffeec9d9")
+		)
+		(pin "4"
+			(uuid "6d124b24-4d45-40f4-8a04-474c914473d3")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "SW2")
 					(unit 1)
 				)
 			)

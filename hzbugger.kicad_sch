@@ -4949,6 +4949,18 @@
 		(uuid "bd28dd58-e144-4501-abb4-284db82b3de5")
 	)
 	(junction
+		(at 90.17 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c037b167-3719-4b22-a3b2-8c985c628bba")
+	)
+	(junction
+		(at 92.71 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c97d6df3-129b-4e46-9c52-c992ed97cb36")
+	)
+	(junction
 		(at 157.48 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5046,6 +5058,16 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 60.96) (xy 90.17 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "108f7de6-f7fb-406b-b7db-f7d746359497")
+	)
+	(wire
+		(pts
 			(xy 273.05 30.48) (xy 269.24 30.48)
 		)
 		(stroke
@@ -5063,6 +5085,16 @@
 			(type default)
 		)
 		(uuid "15f497ba-10f2-48ba-bd4e-ef1790f36255")
+	)
+	(wire
+		(pts
+			(xy 90.17 60.96) (xy 81.28 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "163537da-5b89-4477-a434-b85793c84c45")
 	)
 	(wire
 		(pts
@@ -5216,7 +5248,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 60.96) (xy 85.09 60.96)
+			(xy 76.2 60.96) (xy 72.39 60.96)
 		)
 		(stroke
 			(width 0)
@@ -5866,6 +5898,16 @@
 	)
 	(wire
 		(pts
+			(xy 90.17 77.47) (xy 92.71 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b355df36-55fe-4696-b8fc-6ae69046f483")
+	)
+	(wire
+		(pts
 			(xy 109.22 44.45) (xy 109.22 46.99)
 		)
 		(stroke
@@ -5893,6 +5935,16 @@
 			(type default)
 		)
 		(uuid "bd901613-1246-4703-8b5c-fad15730176a")
+	)
+	(wire
+		(pts
+			(xy 92.71 77.47) (xy 92.71 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3a7b69a-1b5f-4853-9e72-dae2853259d9")
 	)
 	(wire
 		(pts
@@ -6073,6 +6125,16 @@
 			(type default)
 		)
 		(uuid "ed0f7c56-c1fd-44c0-afff-37ff4766270c")
+	)
+	(wire
+		(pts
+			(xy 90.17 60.96) (xy 90.17 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4c51fc4-5c90-4cc1-8bbe-466d7439dd00")
 	)
 	(wire
 		(pts
@@ -9299,7 +9361,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 85.09 60.96 0)
+		(at 72.39 60.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9308,7 +9370,7 @@
 		(fields_autoplaced yes)
 		(uuid "58dbc194-d98c-48a6-8eaa-4ff53f5cc865")
 		(property "Reference" "#PWR53"
-			(at 85.09 67.31 0)
+			(at 72.39 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9317,7 +9379,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 85.09 66.04 0)
+			(at 72.39 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9325,7 +9387,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 85.09 60.96 0)
+			(at 72.39 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9334,7 +9396,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 85.09 60.96 0)
+			(at 72.39 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9343,7 +9405,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 85.09 60.96 0)
+			(at 72.39 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9645,6 +9707,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 82.55 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "60b8186d-d0a0-4c63-9968-47b7c0b75384")
+		(property "Reference" "#PWR033"
+			(at 82.55 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 86.106 65.278 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 82.55 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "24697118-4c2a-4825-93e8-996afd4cfe75")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "hzbugger:HXAM90D")
 		(at 45.72 90.17 0)
 		(unit 1)
@@ -9900,7 +10027,7 @@
 	)
 	(symbol
 		(lib_id "hzbugger:TS-1187A-B-A-B")
-		(at 66.04 58.42 270)
+		(at 87.63 72.39 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9908,7 +10035,7 @@
 		(dnp no)
 		(uuid "6a4439c1-2b0e-48e4-80cf-6a4471679adc")
 		(property "Reference" "SW2"
-			(at 47.752 57.658 90)
+			(at 75.184 71.628 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9917,7 +10044,7 @@
 			)
 		)
 		(property "Value" "BOOT0_SW"
-			(at 43.434 59.944 90)
+			(at 70.866 73.914 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9926,7 +10053,7 @@
 			)
 		)
 		(property "Footprint" "hzbugger:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5"
-			(at 53.34 58.42 0)
+			(at 74.93 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9935,7 +10062,7 @@
 			)
 		)
 		(property "Datasheet" "https://lcsc.com/product-detail/Tactile-Switches_XKB-Enterprise-TS-1187-B-A-A_C318884.html"
-			(at 50.8 58.42 0)
+			(at 72.39 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9944,7 +10071,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 66.04 58.42 0)
+			(at 87.63 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9953,7 +10080,7 @@
 			)
 		)
 		(property "LCSC" "C318884"
-			(at 48.26 58.42 0)
+			(at 69.85 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10338,7 +10465,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 90.17 60.96 270)
+		(at 78.74 60.96 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10346,7 +10473,7 @@
 		(dnp no)
 		(uuid "7b1d9148-0269-4541-9828-5020c425ca57")
 		(property "Reference" "R8"
-			(at 89.662 65.024 90)
+			(at 78.232 65.024 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10354,7 +10481,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 89.916 62.992 90)
+			(at 78.486 62.992 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10362,7 +10489,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 90.17 60.96 0)
+			(at 78.74 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10371,7 +10498,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 90.17 60.96 0)
+			(at 78.74 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10380,7 +10507,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 90.17 60.96 0)
+			(at 78.74 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10389,7 +10516,7 @@
 			)
 		)
 		(property "LCSC" "C25744"
-			(at 90.17 60.96 0)
+			(at 78.74 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)

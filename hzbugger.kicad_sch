@@ -4986,7 +4986,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 119.38) (xy 111.76 119.38)
+			(xy 105.41 119.38) (xy 109.22 119.38)
 		)
 		(stroke
 			(width 0)
@@ -5056,7 +5056,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 119.38) (xy 124.46 119.38)
+			(xy 114.3 119.38) (xy 124.46 119.38)
 		)
 		(stroke
 			(width 0)
@@ -5123,6 +5123,16 @@
 			(type default)
 		)
 		(uuid "203cea1b-8e13-4977-97af-ff3d2b705c4b")
+	)
+	(wire
+		(pts
+			(xy 93.98 111.76) (xy 102.87 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "205cbe44-ea66-40cb-b148-683f1d82620a")
 	)
 	(wire
 		(pts
@@ -5626,6 +5636,16 @@
 	)
 	(wire
 		(pts
+			(xy 121.92 111.76) (xy 124.46 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "898af934-a22d-49c6-ad22-3d24fd5ef23d")
+	)
+	(wire
+		(pts
 			(xy 182.88 68.58) (xy 170.18 68.58)
 		)
 		(stroke
@@ -5773,6 +5793,16 @@
 			(type default)
 		)
 		(uuid "a4f5ef04-3032-4724-aeca-5fa4481aaf3c")
+	)
+	(wire
+		(pts
+			(xy 110.49 111.76) (xy 116.84 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a53a1a08-522a-4f83-bfda-e6b5a7d96f80")
 	)
 	(wire
 		(pts
@@ -6922,6 +6952,71 @@
 			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "#PWR4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 93.98 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "07f5d8ff-d27a-4b40-aaa1-66e27a451d39")
+		(property "Reference" "#PWR026"
+			(at 93.98 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 98.298 113.538 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 93.98 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a142f972-6588-4500-a6e7-2e9b063aa35f")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -11319,6 +11414,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 119.38 111.76 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ac83b138-3608-4bf8-8690-b6eb93d75439")
+		(property "Reference" "R19"
+			(at 119.38 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k5"
+			(at 119.38 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b2ee7eb7-502f-4db2-a780-8b31da4b875c")
+		)
+		(pin "1"
+			(uuid "c3d5f137-94cf-470e-9a88-3118b5ce12a4")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 218.44 139.7 0)
 		(unit 1)
@@ -11887,7 +12059,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 114.3 119.38 90)
+		(at 111.76 119.38 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11896,7 +12068,7 @@
 		(fields_autoplaced yes)
 		(uuid "c0f5febb-2ba7-437d-a053-bf86d86832fa")
 		(property "Reference" "R16"
-			(at 114.3 114.3 90)
+			(at 111.76 114.3 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11904,7 +12076,7 @@
 			)
 		)
 		(property "Value" "22R"
-			(at 114.3 116.84 90)
+			(at 111.76 116.84 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11912,7 +12084,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 114.3 119.38 0)
+			(at 111.76 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11921,7 +12093,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 114.3 119.38 0)
+			(at 111.76 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11930,7 +12102,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 114.3 119.38 0)
+			(at 111.76 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11939,7 +12111,7 @@
 			)
 		)
 		(property "LCSC" "C25092"
-			(at 114.3 119.38 0)
+			(at 111.76 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12948,6 +13120,73 @@
 			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 106.68 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dea305a1-37d4-4de8-a48d-8e1714306ad5")
+		(property "Reference" "D6"
+			(at 106.172 106.172 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED1"
+			(at 106.426 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 106.68 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 106.68 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eb334e00-80cc-476f-b807-f43eee15ffc4")
+		)
+		(pin "2"
+			(uuid "9b05f02f-f74b-4ee3-8de6-ea71af755268")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "D6")
 					(unit 1)
 				)
 			)

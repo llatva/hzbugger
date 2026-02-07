@@ -4828,6 +4828,18 @@
 		)
 		(uuid "7340ec3d-0534-4dae-b6d1-1b4f4cfaf932")
 	)
+	(text "LED silk \nmarkings!"
+		(exclude_from_sim no)
+		(at 106.172 145.796 0)
+		(effects
+			(font
+				(size 6 6)
+				(thickness 1.2)
+				(bold yes)
+			)
+		)
+		(uuid "f8c2c8d4-911a-4ad8-baaa-1aa5948ae498")
+	)
 	(junction
 		(at 83.82 33.02)
 		(diameter 0)
@@ -12549,7 +12561,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 203.2 82.55 0)
 			(effects
 				(font

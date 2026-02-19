@@ -4804,18 +4804,6 @@
 		)
 		(uuid "1f5474d9-5581-4f84-b7ee-e7fc31dc3149")
 	)
-	(text "UART TX & RX LEDs?"
-		(exclude_from_sim no)
-		(at 187.198 155.702 0)
-		(effects
-			(font
-				(size 6 6)
-				(thickness 1.2)
-				(bold yes)
-			)
-		)
-		(uuid "447b3b42-ad30-48b5-bd0b-f9ffd8f6f744")
-	)
 	(text "boot1"
 		(exclude_from_sim no)
 		(at 96.266 87.122 0)
@@ -4827,18 +4815,6 @@
 			)
 		)
 		(uuid "7340ec3d-0534-4dae-b6d1-1b4f4cfaf932")
-	)
-	(text "LED silk \nmarkings!"
-		(exclude_from_sim no)
-		(at 106.172 145.796 0)
-		(effects
-			(font
-				(size 6 6)
-				(thickness 1.2)
-				(bold yes)
-			)
-		)
-		(uuid "f8c2c8d4-911a-4ad8-baaa-1aa5948ae498")
 	)
 	(junction
 		(at 83.82 33.02)
@@ -5003,6 +4979,12 @@
 		(uuid "ee6d9d51-6c7f-46a5-8a67-1281a6fd2913")
 	)
 	(junction
+		(at 181.61 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f0e2ed7a-f67a-496f-80a1-ebdb17d09f03")
+	)
+	(junction
 		(at 115.57 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5150,7 +5132,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 60.96) (xy 171.45 60.96)
+			(xy 199.39 60.96) (xy 181.61 60.96)
 		)
 		(stroke
 			(width 0)
@@ -5520,6 +5502,16 @@
 	)
 	(wire
 		(pts
+			(xy 177.8 63.5) (xy 199.39 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61274a3e-ad09-4813-b311-0697a0f9517a")
+	)
+	(wire
+		(pts
 			(xy 83.82 33.02) (xy 93.98 33.02)
 		)
 		(stroke
@@ -5547,16 +5539,6 @@
 			(type default)
 		)
 		(uuid "68d46e50-4f71-4f32-9f9e-bff3d108b677")
-	)
-	(wire
-		(pts
-			(xy 181.61 63.5) (xy 177.8 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69439f11-7c8a-41e0-b6a5-47325a5bdc32")
 	)
 	(wire
 		(pts
@@ -5780,7 +5762,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 66.04) (xy 160.02 66.04)
+			(xy 210.82 66.04) (xy 160.02 66.04)
 		)
 		(stroke
 			(width 0)
@@ -6140,6 +6122,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 57.15) (xy 181.61 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2e86d9a-7086-4119-85f9-a9c4cde99b2c")
+	)
+	(wire
+		(pts
 			(xy 90.17 60.96) (xy 90.17 67.31)
 		)
 		(stroke
@@ -6187,6 +6179,16 @@
 			(type default)
 		)
 		(uuid "fc80856d-427f-4d36-ad77-2cde63f1c26e")
+	)
+	(wire
+		(pts
+			(xy 181.61 60.96) (xy 171.45 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcd6c917-4117-4ef0-b6fe-493459648540")
 	)
 	(wire
 		(pts
@@ -6374,7 +6376,7 @@
 	)
 	(global_label "UART_RX"
 		(shape input)
-		(at 181.61 63.5 0)
+		(at 199.39 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6384,7 +6386,7 @@
 		)
 		(uuid "32795bd0-ff79-4876-b59c-2e98562cb7b5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 192.699 63.5 0)
+			(at 210.479 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6704,7 +6706,7 @@
 	)
 	(global_label "UART_TX"
 		(shape input)
-		(at 181.61 60.96 0)
+		(at 199.39 60.96 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6714,7 +6716,7 @@
 		)
 		(uuid "b607ed41-dab4-4fb2-8935-6f59c8aa7b5c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 192.3966 60.96 0)
+			(at 210.1766 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7291,7 +7293,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C22843"
 			(at 240.03 64.77 0)
 			(effects
 				(font
@@ -7590,6 +7592,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "DNP"
+			(at 196.85 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d0ced90c-32f1-490a-99f2-035e6ffe2ec5")
 		)
@@ -7649,6 +7660,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated"
+			(at 109.22 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "DNP"
 			(at 109.22 172.72 0)
 			(effects
 				(font
@@ -7728,6 +7748,15 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 247.65 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2286"
 			(at 247.65 77.47 0)
 			(effects
 				(font
@@ -8864,7 +8893,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 194.31 66.04 0)
+		(at 210.82 66.04 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8873,7 +8902,7 @@
 		(fields_autoplaced yes)
 		(uuid "401f5d78-c2a3-4ed3-88d1-b281279643d5")
 		(property "Reference" "TP1"
-			(at 196.85 61.4679 0)
+			(at 213.36 61.4679 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8882,7 +8911,7 @@
 			)
 		)
 		(property "Value" "TPA14"
-			(at 196.85 64.0079 0)
+			(at 213.36 64.0079 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8891,7 +8920,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 199.39 66.04 0)
+			(at 215.9 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8900,7 +8929,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 199.39 66.04 0)
+			(at 215.9 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8909,7 +8938,16 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 194.31 66.04 0)
+			(at 210.82 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "DNP"
+			(at 210.82 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9192,7 +9230,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C22843"
 			(at 240.03 77.47 0)
 			(effects
 				(font
@@ -10188,6 +10226,84 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 181.61 54.61 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6f9fee88-dccd-4b2f-8418-986c32b6c898")
+		(property "Reference" "R20"
+			(at 176.53 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1k5"
+			(at 176.276 55.118 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 181.61 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 181.61 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22843"
+			(at 181.61 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "793d46d2-2a22-495f-8667-912a2372615e")
+		)
+		(pin "1"
+			(uuid "293a8fd8-a0c7-491b-b727-828b67e67236")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 185.42 76.2 180)
 		(unit 1)
@@ -10451,7 +10567,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C22843"
 			(at 179.07 76.2 0)
 			(effects
 				(font
@@ -11374,6 +11490,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "DNP"
+			(at 48.26 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "c0c7ab8b-3739-4ef1-94e2-1b65605cf0a5")
 		)
@@ -11461,6 +11586,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 181.61 44.45 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a8472d49-1de7-4e11-8d81-00473c8b8a41")
+		(property "Reference" "#PWR034"
+			(at 177.8 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 185.42 44.4499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 181.61 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d687a5e2-a10f-4e12-8a83-47e20a24cd9a")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_02x05_Top_Bottom")
 		(at 196.85 134.62 0)
 		(unit 1)
@@ -11505,6 +11697,15 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x05, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 196.85 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "DNP"
 			(at 196.85 134.62 0)
 			(effects
 				(font
@@ -11605,7 +11806,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C22843"
 			(at 119.38 111.76 0)
 			(effects
 				(font
@@ -11740,6 +11941,24 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 248.92 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2297"
+			(at 248.92 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field6" ""
 			(at 248.92 100.33 0)
 			(effects
 				(font
@@ -12730,7 +12949,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C22843"
 			(at 240.03 100.33 0)
 			(effects
 				(font
@@ -13249,6 +13468,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2290"
+			(at 248.92 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a11ed3e5-e576-4e4e-8935-ff5801a553e7")
 		)
@@ -13497,6 +13725,82 @@
 			(project ""
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 181.61 48.26 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e84f9753-f701-4a40-8a87-0e8fdbc618ed")
+		(property "Reference" "D7"
+			(at 176.022 48.768 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED1"
+			(at 178.562 48.514 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 181.61 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 181.61 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2286"
+			(at 181.61 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8bf2dc80-ca1b-489f-8a04-328b06ffe443")
+		)
+		(pin "2"
+			(uuid "06ec058c-c608-4ba7-ac73-40ba324f3c45")
+		)
+		(instances
+			(project "hzbugger"
+				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
+					(reference "D7")
 					(unit 1)
 				)
 			)

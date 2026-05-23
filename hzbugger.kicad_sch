@@ -7232,7 +7232,7 @@
 			(uuid "c6cfc8df-1ddc-4ae7-87ba-86e8cd5262c9")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "F1")
 					(unit 1)
@@ -7293,7 +7293,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22843"
+		(property "LCSC" "C25867"
 			(at 240.03 64.77 0)
 			(effects
 				(font
@@ -8193,7 +8193,7 @@
 			(uuid "5836d629-2d8d-4909-8926-aa50644ec051")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "Y1")
 					(unit 1)
@@ -8535,7 +8535,7 @@
 			(uuid "5218c710-3905-47f5-8400-4b35ea7bcaae")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "#PWR1")
 					(unit 1)
@@ -8959,7 +8959,7 @@
 			(uuid "087208b5-28a3-40c2-953c-d174649b0ee5")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "TP1")
 					(unit 1)
@@ -9038,7 +9038,7 @@
 			(uuid "36f29523-8a79-4324-989d-1d328b4a6921")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "C8")
 					(unit 1)
@@ -9230,7 +9230,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22843"
+		(property "LCSC" "C25867"
 			(at 240.03 77.47 0)
 			(effects
 				(font
@@ -9682,7 +9682,7 @@
 			(uuid "ef1e7897-6d6d-4843-bcc6-f242ce87d5c3")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "SW1")
 					(unit 1)
@@ -9911,7 +9911,7 @@
 			(uuid "db29245e-4d13-4bea-b934-e1c832f8f4b2")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "U4")
 					(unit 1)
@@ -10217,7 +10217,7 @@
 			(uuid "8e87c118-92d3-4feb-95d8-59cca90a8805")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "#PWR3")
 					(unit 1)
@@ -10279,7 +10279,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22843"
+		(property "LCSC" "C25867"
 			(at 181.61 54.61 0)
 			(effects
 				(font
@@ -10567,7 +10567,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22843"
+		(property "LCSC" "C25867"
 			(at 179.07 76.2 0)
 			(effects
 				(font
@@ -10868,7 +10868,7 @@
 			(uuid "c14ffacd-5901-49c3-9051-c6ccdcd39ed5")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "#PWR5")
 					(unit 1)
@@ -11000,7 +11000,7 @@
 			(uuid "fa131448-e9b8-405c-8945-d54fd0d6e0c6")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "#PWR12")
 					(unit 1)
@@ -11512,7 +11512,7 @@
 			(uuid "c7549c17-3dbb-4ad0-881b-8d903bde5428")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "J4")
 					(unit 1)
@@ -11745,7 +11745,7 @@
 			(uuid "8aff23bd-6a2e-4377-b2cc-53b8d56d63d8")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "J2")
 					(unit 1)
@@ -11806,7 +11806,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22843"
+		(property "LCSC" "C25867"
 			(at 119.38 111.76 0)
 			(effects
 				(font
@@ -11974,7 +11974,7 @@
 			(uuid "6817572f-90db-43f2-b65b-53da9497c097")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "D1")
 					(unit 1)
@@ -12807,7 +12807,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C22843"
+		(property "LCSC" "C25867"
 			(at 203.2 82.55 0)
 			(effects
 				(font
@@ -13642,7 +13642,7 @@
 			(uuid "00aee736-ed2a-4ffd-bb3b-12780bb4aaf8")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "U2")
 					(unit 1)
@@ -13722,7 +13722,7 @@
 			(uuid "eff5bd84-18ac-4a72-8b89-a26c262efc58")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "U3")
 					(unit 1)
@@ -14093,7 +14093,7 @@
 			(uuid "118dfaa6-f0a1-4ad1-b868-d593a1c48d96")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "U1")
 					(unit 1)
@@ -14522,7 +14522,7 @@
 			(uuid "69de7d63-d194-4657-b806-487de4e54cdb")
 		)
 		(instances
-			(project ""
+			(project "hzbugger"
 				(path "/493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
 					(reference "D2")
 					(unit 1)

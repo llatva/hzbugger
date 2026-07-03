@@ -700,7 +700,7 @@
         "uuid": "493ccddd-ac13-43bb-97a7-ed9a2ed970cc"
       }
     ],
-    "used_designators": "D8,#PWR29,R21,TP3,J1,U5",
+    "used_designators": "H1-2,D8,#PWR28-30,R21,TP3,J1,U5",
     "variants": []
   },
   "sheets": [

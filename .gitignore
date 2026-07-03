@@ -83,3 +83,7 @@ __pycache__/
 # Other common artifacts
 *.log
 *.temp
+
+*.xml
+*.csv
+~*

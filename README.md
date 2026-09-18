@@ -16,5 +16,4 @@ See [BlackMagic Probe adaptation guide](./blackmagic-probe-adaptation-guide.md) 
 
 ## LICENSE
 
-TBD
-
+CERN-OHL-S (strongly reciprocal), see [LICENSE.txt](./LICENSE.txt) for details.

@@ -7,14 +7,6 @@ See [BlackMagic Probe adaptation guide](./blackmagic-probe-adaptation-guide.md) 
 
 <img src="./hzbugger-revA-3D-top.png" width="500"> <img src="./hzbugger-revA-3D-bot.png" width="500">
 
-## Hardware summary (rev.A)
-
-- MCU: **STM32F103C8T6**
-- USB: onboard USB-A
-- Main target/debug connector: **J2 (2x5 IDC, 2.54 mm)**
-- Onboard programming header: **J4 (1x4)**
-- Auxiliary breakout header: **J6 (1x6, GPIO/PB3/4/5)**
-
 ## References
 
 * Website of the BlackMagic Probe: https://black-magic.org/

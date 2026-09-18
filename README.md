@@ -1,34 +1,63 @@
-# Hzbugger
+# hzbugger
 
-Hzbugger is an open-source, Black Magic Probe (BMP) compatible SWD/JTAG hardware debugger and programmer based on the popular STM32F103 microcontroller. It is designed to act as a convenient, all-in-one USB tool for programming and debugging ARM Cortex-M targets.
+Hzbugger is an STM32F103C8T6-based Black Magic Probe compatible SWD debugger with UART passthrough.
 
-## Features
+## Hardware summary (rev.A)
 
-- **Microcontroller**: STM32F103C8T6 (ARM Cortex-M3, 72 MHz)
-- **USB Interface**: Direct-plug USB Type-A connector (HX AM 90D)
-- **Protection**: On-board SRV05-4 USB ESD protection and 1A fuse
-- **Power**: 3.3V logic level with an integrated AMS1117-3.3 linear regulator
-- **Auxiliary Interfaces**: 
-  - 6-pin GPIO/UART header (J6) for target serial console
-  - 4-pin SWD header (J4) for initially flashing the debugger's own firmware
-- **User Controls**: Boot0 (SW2) and Reset (SW1) tactile buttons to easily enter system bootloader mode
-- **Indicators**: Dedicated Power LED and multiple status LEDs for activity monitoring
+- MCU: **STM32F103C8T6**
+- USB: onboard USB-A connector
+- Main target/debug connector: **J2 (2x5 IDC, 2.54 mm)**
+- Onboard programming header: **J4 (1x4)**
+- Auxiliary breakout header: **J6 (1x6, GPIO/PB3/4/5)**
 
-## Hardware Repository Structure
+## Connectors and pinout
 
-This repository contains the full KiCad electronic design automation (EDA) project files:
-- `hzbugger.kicad_pro` / `hzbugger.kicad_sch` / `hzbugger.kicad_pcb`: Core KiCad 8.x project files.
-- `gerbers/`: Pre-generated Gerber files, drill files, and pick-and-place files for PCB manufacturing.
-- `production/`: IPC netlists, unified BOM (`bom.csv`), and positional files for automated assembly.
-- `hzbugger.pretty/` & `hzbugger.3dshapes/`: Project-specific footprints and 3D models.
+### J2 (IDC 2x5) — target/debug interface
 
-## Bill of Materials (BOM) Highlights
+This is the main connector for target SWD + UART.
 
-| Reference | Value | Description |
-|-----------|-------|-------------|
-| U1 | STM32F103C8T6 | Main MCU |
-| U2 | SRV05-4 | USB ESD Protection |
-| U3 | AMS1117-3.3 | 3.3V LDO Voltage Regulator |
-| U4 | HX AM 90D | USB-A Male Connector |
-| F1 | 1A | Replaceable/Poly Fuse |
-| Y1 | 8MHz | System Crystal |
+| Pin | Signal |
+|---|---|
+| 1 | UART_TX |
+| 2 | UART_RX |
+| 3 | SWO_TRACE |
+| 4 | RST |
+| 5 | GND |
+| 6 | SWDIO |
+| 7 | SWCLK |
+| 8 | +3V3 |
+| 9 | +5V |
+| 10 | GND |
+
+Silkscreen also marks `pin1` and prints odd/even column signal names.
+
+### J4 (1x4, labeled SWD) — programming/debug of Hzbugger MCU
+
+| Pin | Signal | MCU pin |
+|---|---|---|
+| 1 | GND | GND |
+| 2 | +3V3 | +3V3 |
+| 3 | DCLK | PA14 |
+| 4 | DIO | PA13 |
+
+### J6 (1x6, labeled GPIO)
+
+| Pin | Signal |
+|---|---|
+| 1 | GND |
+| 2 | PB3 / SPI1_SCK (via 22R) |
+| 3 | PB4 / SPI1_MISO (via 22R) |
+| 4 | PB5 / SPI1_MOSI (via 22R) |
+| 5 | +3V3 |
+| 6 | GND |
+
+## Power notes
+
+- USB VBUS is routed to **+5V**.
+- **AMS1117-3.3** generates **+3V3** from +5V.
+- On J2, **both +3V3 (pin 8) and +5V (pin 9) are present**.
+- There is no on-board 3.3V/5V output selector switch; choose the target supply rail in your cable/target wiring.
+
+## Firmware adaptation guide
+
+See `blackmagic-probe-adaptation-guide.md` for firmware-porting and usage details.

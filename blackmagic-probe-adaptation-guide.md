@@ -7,7 +7,7 @@ Hzbugger is a Black Magic Probe (BMP)-compatible SWD debugger. This guide walks 
 - **Simultaneous SWD + UART** using two USB CDC ACM serial ports.
 - **GDB server integration** over the primary USB serial port.
 - **Generic serial console access** over the secondary USB serial port.
-- **Target power output** support at **3.3 V or 5 V** (selectable on the board).
+- **Target connection over IDC 2x5** with SWD, UART, reset, and power rails.
 
 > Note: This guide assumes you are familiar with the upstream Black Magic Probe firmware structure. When in doubt, refer to the upstream BMP documentation for the canonical build steps.
 
@@ -16,18 +16,57 @@ Hzbugger is a Black Magic Probe (BMP)-compatible SWD debugger. This guide walks 
 - The upstream Black Magic Probe firmware source.
 - A toolchain such as `arm-none-eabi-gcc`.
 - USB access to the Hzbugger device for flashing.
-- The Hzbugger schematic or silk labels for pin and voltage selection reference.
+- The Hzbugger schematic or silk labels for pin and power-rail reference.
 
 ## 1) Identify the Hzbugger Hardware Mapping
 
-Before changing firmware, map the Hzbugger pins and peripherals to the BMP firmware expectations:
+Before changing firmware, map the Hzbugger pins and peripherals to BMP firmware expectations.
 
-- **SWD interface:** SWDIO, SWCLK, and GND.
-- **UART passthrough:** UART TX/RX and GND.
-- **USB device:** VID/PID, product strings, and USB endpoints.
-- **Power output:** board selector/jumper that toggles 3.3 V vs 5 V output.
+### Main target connector: J2 (IDC 2x5, 2.54 mm)
 
-Document these pins in a short table (even a private note) so you can mirror them in the firmware definitions.
+Use this as the canonical target pinout:
+
+| Pin | Signal |
+|---|---|
+| 1 | UART_TX |
+| 2 | UART_RX |
+| 3 | SWO_TRACE |
+| 4 | RST |
+| 5 | GND |
+| 6 | SWDIO |
+| 7 | SWCLK |
+| 8 | +3V3 |
+| 9 | +5V |
+| 10 | GND |
+
+### Onboard programming connector: J4 (1x4, labeled SWD)
+
+This header is for programming/debugging the Hzbugger MCU itself:
+
+| Pin | Signal | MCU pin |
+|---|---|---|
+| 1 | GND | GND |
+| 2 | +3V3 | +3V3 |
+| 3 | DCLK | PA14 |
+| 4 | DIO | PA13 |
+
+### Auxiliary GPIO connector: J6 (1x6)
+
+| Pin | Signal |
+|---|---|
+| 1 | GND |
+| 2 | PB3 / SPI1_SCK (via 22R) |
+| 3 | PB4 / SPI1_MISO (via 22R) |
+| 4 | PB5 / SPI1_MOSI (via 22R) |
+| 5 | +3V3 |
+| 6 | GND |
+
+### Power behavior on rev.A
+
+- USB VBUS provides the board +5V rail.
+- AMS1117-3.3 generates +3V3.
+- J2 exposes both +3V3 (pin 8) and +5V (pin 9) simultaneously.
+- There is no onboard selector that switches target output between 3.3V and 5V.
 
 ## 2) Create a New BMP Platform Definition
 
@@ -53,37 +92,30 @@ make PROBE_HOST=hzbugger
 
 Flash the resulting binary to the Hzbugger using your preferred method (DFU, SWD, or a board-specific bootloader).
 
-## 4) STM32F103 DFU Bootloader (Firmware Upgrade Path)
+## 4) STM32F103 DFU Bootloader Notes
 
-Hzbugger uses an **STM32F103** MCU, which includes a built-in USB DFU bootloader in system memory. You can leverage this for easy firmware upgrades without external tools.
+Hzbugger uses an **STM32F103** MCU, which has a built-in ROM DFU bootloader. However, on this board revision, BOOT0 is not routed to a dedicated external jumper/switch.
 
-### Entering DFU Mode (STM32F103)
+### Entering DFU Mode on this board
 
-The STM32F103 enters its ROM DFU bootloader when **BOOT0 = 1** and **BOOT1 = 0** at reset:
+ROM DFU still requires **BOOT0 = 1** and reset, but rev.A does not provide a dedicated BOOT0 user control. In practice:
 
-- **BOOT0 high:** pull-up to 3.3 V (via jumper or switch).
-- **BOOT1 low:** BOOT1 is tied to PB2; keep it pulled down (default).
+- The default build is intended to be flashed/debugged over SWD (J4/J2).
+- DFU on this hardware requires board-level rework or temporary BOOT0 injection.
+- BOOT1 (PB2) remains tied low by default, which is the normal configuration.
 
-Recommended hardware provisions for development boards:
+### If DFU is available in your setup
 
-- A **BOOT0 jumper/switch** so DFU mode can be entered without rewiring.
-- A **RESET button** to re-assert reset after changing BOOT0.
-- Keep **BOOT1 (PB2) hard-tied low** unless you specifically need alternate boot modes.
-
-After setting BOOT0 high, reset the MCU and it should enumerate as a USB DFU device.
-
-### Flashing via DFU
-
-On Linux (with `dfu-util` installed):
+When BOOT0 is externally forced high and the device enumerates in DFU mode, flash as usual (Linux example):
 
 ```bash
 dfu-util -l
 dfu-util -a 0 -s 0x08000000:leave -D blackmagic.bin
 ```
 
-On Windows/macOS, use the **STM32CubeProgrammer** GUI to connect to the DFU device and program the binary at address `0x08000000`.
+On Windows/macOS, use **STM32CubeProgrammer** to program at `0x08000000`.
 
-Once flashing is complete, return **BOOT0 low** and reset to run the new firmware.
+After flashing, restore normal boot configuration and reset.
 
 ## 5) Verify USB Enumeration
 
@@ -152,15 +184,16 @@ Hzbugger supports **simultaneous SWD debugging and UART logging**. Typical flow:
 
 This is especially useful for correlating firmware logs with breakpoints or crash reproduction.
 
-## 9) Target Power Output (3.3 V / 5 V)
+## 9) Target Power Output (+3V3 / +5V rails on J2)
 
-Hzbugger can supply **either 3.3 V or 5 V** to the target device.
+Hzbugger exposes **both +3V3 and +5V rails** on J2:
 
-- Locate the **voltage selection jumper or solder bridge** on the board.
-- Set it to match your target’s required voltage.
-- Ensure that the target is not simultaneously powered from another source unless the design explicitly supports it.
+- **J2 pin 8:** +3V3
+- **J2 pin 9:** +5V
 
-> Always verify the silk-screen or schematic for the correct selector position before powering the target.
+There is no onboard selector that switches one rail to the other. Choose the correct rail in your cable/target-side wiring and avoid back-powering conflicts.
+
+> Always verify target voltage requirements before connecting either power rail.
 
 ## 10) Quick Troubleshooting Checklist
 
@@ -168,8 +201,8 @@ Hzbugger can supply **either 3.3 V or 5 V** to the target device.
 - **GDB fails to connect:** check SWD wiring and common ground, then run `monitor swdp_scan`.
 - **UART has no output:** verify target baud rate and RX/TX pin orientation.
 - **DFU mode not detected:** confirm BOOT0 is high, BOOT1 is low, and reset was applied.
-- **Unstable target behavior:** confirm correct 3.3 V / 5 V selection and avoid double power sources.
+- **Unstable target behavior:** verify you are using the intended rail (+3V3 or +5V) and avoid double power sources.
 
 ## Summary
 
-By defining a minimal BMP platform for Hzbugger, you can unlock full SWD debugging alongside real-time UART logging. With dual CDC ACM ports and selectable target power, Hzbugger becomes a compact, flexible debugging tool for modern ARM microcontrollers.
+By defining a minimal BMP platform for Hzbugger, you can unlock full SWD debugging alongside real-time UART logging. With dual CDC ACM ports and explicit +3V3/+5V target rail pins, Hzbugger becomes a compact, flexible debugging tool for modern ARM microcontrollers.

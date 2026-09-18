@@ -9,6 +9,10 @@ See [BlackMagic Probe adaptation guide](./blackmagic-probe-adaptation-guide.md) 
 
 <img src="./hzbugger-revA-3D-top.png" width="500"> <img src="./hzbugger-revA-3D-bot.png" width="500">
 
+## Schematic
+
+<a href="./hzbugger-revA-schematic.pdf">hzbugger-revA-schematic.pdf</a>
+
 ## References
 
 * Website of the BlackMagic Probe: https://black-magic.org/

@@ -11,7 +11,7 @@ See [BlackMagic Probe adaptation guide](./blackmagic-probe-adaptation-guide.md) 
 
 ## Schematic
 
-<a href="./hzbbugger-revA-schematic.pdf">hzbbugger-revA-schematic.pdf</a>
+<a href="./hzbugger-revA-schematic.pdf">hzbugger-revA-schematic.pdf</a>
 
 ## References
 

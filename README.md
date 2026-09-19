@@ -1,6 +1,6 @@
 # hzbugger
 
-Hzbugger is an STM32F103C8T6-based BlackMagic Probe compatible debugger by Lasse OH3HZB. 
+Hzbugger is an STM32F103C8T6-based Black Magic Probe compatible debugger by Lasse OH3HZB. 
 
 Bottom side silkscreen created using AI tools (intended for *black PCB* as in pictures below). 
 

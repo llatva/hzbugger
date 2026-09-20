@@ -33,6 +33,8 @@ Start GDB from the shell:
 
     arm-none-eabi-gdb build/my_application.elf
 
+### Flash the firmware
+
 Then run the following commands inside GDB:
 
     target extended-remote /dev/ttyACM1
